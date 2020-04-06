@@ -1,0 +1,240 @@
+/*
+Colors
+
+Primary: #eb2f64
+Primary light:#FF3366
+Primary dark:#BA265D
+
+Grey light 1:#faf9f9
+Grey light 2:#f4f2f2
+Grey light 3:#f0eeee
+Grey light 4:#ccc
+
+Grey dark 1:#333
+Grey dark 2:#777
+Grey dark 3:#999
+
+*/
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #FF3366;
+  --color-primary-dark: #BA265D;
+  --color-Grey-light-1: #faf9f9;
+  --color-Grey-light-2: #f4f2f2;
+  --color-Grey-light-3: #f0eeee;
+  --color-Grey-light-4: #ccc;
+  --color-Grey-dark-1: #333;
+  --color-Grey-dark-2: #777;
+  --color-Grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0, 0.08);
+  --line: 1px solid var( --color-Grey-light-2 ); }
+
+*,
+*::after
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100vh;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.08);
+  font-family: 'Comic Sans MS'; }
+
+.form {
+  max-width: 110rem;
+  margin: 3rem auto;
+  background-color: #faf9f9;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  height: 51rem; }
+
+.header {
+  height: 6rem;
+  background-color: #fff;
+  border-bottom: 1px solid #777;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem; }
+
+.sp__list {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  list-style: none;
+  justify-content: center;
+  background-color: Highlight;
+  padding: 18px 35px;
+  color: white;
+  font-size: 18px; }
+
+.sp__list-1 {
+  padding-left: 20%;
+  font-size: 18px;
+  font-family: 'Comic Sans MS';
+  letter-spacing: 3px; }
+
+.sp__list-link {
+  padding-left: 40%;
+  cursor: pointer; }
+
+.sp__list-link > a {
+  color: limegreen;
+  font-family: 'Comic Sans MS';
+  text-transform: none;
+  font-size: 18px;
+  transition: transform .2s;
+  /* Animation */ }
+
+.sp__list-link > a:hover {
+  color: orangered;
+  text-transform: none;
+  transform: scale(1.2); }
+
+#main > p {
+  border-bottom: 2px solid #f0eeee;
+  padding: 25px 15px;
+  font-size: 17px;
+  font-family: 'Comic Sans MS'; }
+
+#main > p > a {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; }
+
+#deleteBtn {
+  cursor: pointer;
+  color: orangered;
+  text-decoration: none;
+  transition: transform .2s;
+  /* Animation */
+  font-size: 17px; }
+
+#deleteBtn:hover {
+  color: coral;
+  transform: scale(1.2); }
+
+#editBtn {
+  cursor: pointer;
+  color: limegreen;
+  text-decoration: none;
+  transition: transform .2s;
+  /* Animation */ }
+
+#editBtn:hover {
+  color: rgba(50, 250, 50, 0.9);
+  transform: scale(1.2); }
+
+/*#main > p > a > i ::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: dimgray;
+    top: -13px;
+}*/
+/*#main > a > i ::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: dimgray;
+    left: 1px;
+    bottom: -4px;
+    transform: rotate(45deg);*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */ }
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  animation-delay: .3s; }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer; }
+
+.createSp {
+  font-family: 'Comic Sans MS';
+  font-weight: 400;
+  font-size: 18px;
+  padding-bottom: 15px; }
+
+.nameSP {
+  height: 60px;
+  width: 250px;
+  margin-bottom: 20px;
+  text-align: center; }
+
+.nameSP:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+
+.add, .tick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif; }
+
+.add {
+  width: 150px;
+  height: 40px;
+  background: dodgerblue;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.67, 0.17, 0.4, 0.83); }
+
+.add svg {
+  transform: rotate(180deg);
+  transition: all .5s; }
+
+.button__circle {
+  width: 55px;
+  height: 55px;
+  background-color: lawngreen;
+  border-radius: 50%;
+  transform: rotate(-180deg);
+  margin-left: 50px; }
+
+.add:hover {
+  cursor: pointer; }
+
+.tick {
+  color: white;
+  font-size: 2em;
+  transition: all .9s; }
+
+.Pagination {
+  margin-bottom: 2rem;
+  float: right; }
